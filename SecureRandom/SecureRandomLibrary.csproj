@@ -13,7 +13,7 @@
     <RepositoryType>GitHub</RepositoryType>
     <PackageTags>System.Random, Random, Secure Random, Cryptography, RNGCryptoServiceProvider</PackageTags>
     <PackageReleaseNotes>1st Release w. Unit Tests</PackageReleaseNotes>
-    <PackageIconUrl>blizkrieglogo300.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement/blob/master/SecureRandom/blizkrieglogo300.png</PackageIconUrl>
   </PropertyGroup>
 
 </Project>
