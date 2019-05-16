@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>SecureRandomLibrary</AssemblyName>
+    <RootNamespace>SecureRandomLibrary</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>A replacement for System.Random that leverages</Description>
+  </PropertyGroup>
+
+</Project>
