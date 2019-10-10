@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>SecureRandomLibrary</AssemblyName>
-    <RootNamespace>SecureRandomLibrary</RootNamespace>
+    <AssemblyName>BlitzkriegSoftware.SecureRandomLibrary</AssemblyName>
+    <RootNamespace>BlitzkriegSoftware.SecureRandomLibrary</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A replacement for System.Random that leverages System.Security.Cryptography.RNGCryptoServiceProvider</Description>
     <Copyright>(c) 2019 Blitzkrieg Software / Stuart Williams</Copyright>
@@ -12,7 +12,7 @@
     <RepositoryUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
     <PackageTags>System.Random, Random, Secure Random, Cryptography, RNGCryptoServiceProvider</PackageTags>
-    <PackageReleaseNotes>1st Release w. Unit Tests</PackageReleaseNotes>
+    <PackageReleaseNotes>Release w. Namespace fixes.</PackageReleaseNotes>
     <PackageIconUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement/blob/master/SecureRandom/blizkrieglogo300.png</PackageIconUrl>
     <PackageId>BlitzkriegSoftware.SecureRandomLibrary</PackageId>
     <Authors>Stuart Williams</Authors>
@@ -22,10 +22,13 @@
 
   <PropertyGroup>
     <PackageIcon>blizkrieglogo300.png</PackageIcon>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="blizkrieglogo300.png" Pack="true" PackagePath="\"/>
+    <None Include="blizkrieglogo300.png" Pack="true" PackagePath="\" />
   </ItemGroup>
   
 </Project>

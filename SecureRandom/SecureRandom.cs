@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-namespace SecureRandomLibrary
+namespace BlitzkriegSoftware.SecureRandomLibrary
 {
     /// <summary>
     /// Attempts to implement System.Random but with the <c>RNGCryptoServiceProvider</c>
