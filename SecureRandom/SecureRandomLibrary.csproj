@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -14,6 +14,18 @@
     <PackageTags>System.Random, Random, Secure Random, Cryptography, RNGCryptoServiceProvider</PackageTags>
     <PackageReleaseNotes>1st Release w. Unit Tests</PackageReleaseNotes>
     <PackageIconUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement/blob/master/SecureRandom/blizkrieglogo300.png</PackageIconUrl>
+    <PackageId>BlitzkriegSoftware.SecureRandomLibrary</PackageId>
+    <Authors>Stuart Williams</Authors>
+    <Company>Blitzkrieg Software</Company>
+    <Product>BlitzkriegSoftware.SecureRandomLibrary</Product>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageIcon>blizkrieglogo300.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="blizkrieglogo300.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+  
 </Project>
