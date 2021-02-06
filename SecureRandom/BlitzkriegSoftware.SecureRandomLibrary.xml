@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlitzkriegSoftware.SecureRandomLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:BlitzkriegSoftware.SecureRandomLibrary.SecureRandom">
+            <summary>
+            Attempts to implement System.Random but with the <c>RNGCryptoServiceProvider</c>
+            </summary>
+        </member>
+        <member name="M:BlitzkriegSoftware.SecureRandomLibrary.SecureRandom.#ctor">
+            <summary>
+            CTOR
+            </summary>
+        </member>
+        <member name="M:BlitzkriegSoftware.SecureRandomLibrary.SecureRandom.#ctor(System.Int32)">
+            <summary>
+            CTOR w. Seed
+            <para>For compatibility not used</para>
+            </summary>
+            <param name="seed">(ignored)</param>
+        </member>
+        <member name="M:BlitzkriegSoftware.SecureRandomLibrary.SecureRandom.Next">
+            <summary>
+            Next
+            </summary>
+            <returns>Random Positive integer 0 or greater</returns>
+        </member>
+        <member name="M:BlitzkriegSoftware.SecureRandomLibrary.SecureRandom.Next(System.Int32)">
+            <summary>
+            Next
+            </summary>
+            <param name="max">Upper limit (not inclusive)</param>
+            <returns>0 to max random integer</returns>
+        </member>
+        <member name="M:BlitzkriegSoftware.SecureRandomLibrary.SecureRandom.Next(System.Int32,System.Int32)">
+            <summary>
+            Next
+            </summary>
+            <param name="min">Lower Limit (inclusive)</param>
+            <param name="max">Upper limit (not inclusive)</param>
+            <returns>random integer min to max</returns>
+        </member>
+        <member name="M:BlitzkriegSoftware.SecureRandomLibrary.SecureRandom.NextDouble">
+            <summary>
+            Next Double
+            </summary>
+            <returns>0 to .999.... Random Double</returns>
+        </member>
+        <member name="M:BlitzkriegSoftware.SecureRandomLibrary.SecureRandom.NextBytes(System.Byte[])">
+            <summary>
+            Next Bytes given initial buffer
+            </summary>
+            <param name="buf">byte array buffer</param>
+        </member>
+    </members>
+</doc>

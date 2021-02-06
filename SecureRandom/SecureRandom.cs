@@ -20,7 +20,9 @@ namespace BlitzkriegSoftware.SecureRandomLibrary
         /// <para>For compatibility not used</para>
         /// </summary>
         /// <param name="seed">(ignored)</param>
+#pragma warning disable IDE0060 // This is for compatibility to .NET System.Random
         public SecureRandom(int seed)
+#pragma warning restore IDE0060 // Remove unused parameter
         {
         }
 
@@ -52,7 +54,7 @@ namespace BlitzkriegSoftware.SecureRandomLibrary
         /// <param name="min">Lower Limit (inclusive)</param>
         /// <param name="max">Upper limit (not inclusive)</param>
         /// <returns>random integer min to max</returns>
-        public int Next(int min, int max)
+        public virtual int Next(int min, int max)
         {
             var rnd = new byte[4];
             using (var rng = new RNGCryptoServiceProvider()) rng.GetBytes(rnd);
@@ -64,7 +66,7 @@ namespace BlitzkriegSoftware.SecureRandomLibrary
         /// Next Double
         /// </summary>
         /// <returns>0 to .999.... Random Double</returns>
-        public double NextDouble()
+        public virtual double NextDouble()
         {
             var min = 0.0;
             var max = 1.0;
@@ -74,7 +76,11 @@ namespace BlitzkriegSoftware.SecureRandomLibrary
             return Convert.ToDouble(i % (max - min + 1) + min);
         }
 
-        public void NextBytes(byte[] buf)
+        /// <summary>
+        /// Next Bytes given initial buffer
+        /// </summary>
+        /// <param name="buf">byte array buffer</param>
+        public virtual void NextBytes(byte[] buf)
         {
             using (var rng = new RNGCryptoServiceProvider()) rng.GetNonZeroBytes(buf);
         }
