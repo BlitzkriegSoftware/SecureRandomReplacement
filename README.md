@@ -7,7 +7,7 @@ The `SecureRandom` class has the same signatures and should have the same funtio
 
 ## API Details
 
-[API Details](./SecureRandomLibrary/BlitzkriegSoftware.SecureRandomLibrary.md)
+[API Details](https://github.com/BlitzkriegSoftware/SecureRandomReplacement/blob/master/SecureRandom/BlitzkriegSoftware.SecureRandomLibrary.md)
 
 ## License
 Copyright (c) 2018-2021
