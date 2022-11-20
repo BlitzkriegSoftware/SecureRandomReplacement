@@ -1,70 +1,69 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>BlitzkriegSoftware.SecureRandomLibrary</AssemblyName>
-    <RootNamespace>BlitzkriegSoftware.SecureRandomLibrary</RootNamespace>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>A replacement for System.Random that leverages System.Security.Cryptography.RNGCryptoServiceProvider</Description>
-    <Copyright>(c) 2019-2021 Blitzkrieg Software / Stuart Williams</Copyright>
-    <PackageLicenseExpression></PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement</RepositoryUrl>
-    <RepositoryType>GitHub</RepositoryType>
-    <PackageTags>System.Random, Random, Secure Random, Cryptography, RNGCryptoServiceProvider</PackageTags>
-    <PackageReleaseNotes>1.0.3 - NuGet Updates and Documentation
-1.0.2 - Release w. Namespace fixes.</PackageReleaseNotes>
-    <PackageIconUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement/blob/master/SecureRandom/blizkrieglogo300.png</PackageIconUrl>
-    <PackageId>BlitzkriegSoftware.SecureRandomLibrary</PackageId>
-    <Authors>Stuart Williams</Authors>
-    <Company>Blitzkrieg Software</Company>
-    <Product>BlitzkriegSoftware.SecureRandomLibrary</Product>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<AssemblyName>BlitzkriegSoftware.SecureRandomLibrary</AssemblyName>
+		<RootNamespace>BlitzkriegSoftware.SecureRandomLibrary</RootNamespace>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>A replacement for System.Random that leverages System.Security.Cryptography.RNGCryptoServiceProvider</Description>
+		<Copyright>(c) 2019-2022 Blitzkrieg Software / Stuart Williams</Copyright>
+		<PackageLicenseExpression></PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement</RepositoryUrl>
+		<RepositoryType>GitHub</RepositoryType>
+		<PackageTags>System.Random, Random, Secure Random, Cryptography, RNGCryptoServiceProvider</PackageTags>
+		<PackageReleaseNotes>
+			1.0.4 - Net Upgrade
+			1.0.3 - NuGet Updates and Documentation
+			1.0.2 - Release w. Namespace fixes.
+		</PackageReleaseNotes>
+		<PackageIconUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement/blob/master/SecureRandom/blizkrieglogo300.png</PackageIconUrl>
+		<PackageId>BlitzkriegSoftware.SecureRandomLibrary</PackageId>
+		<Authors>Stuart Williams</Authors>
+		<Company>Blitzkrieg Software</Company>
+		<Product>BlitzkriegSoftware.SecureRandomLibrary</Product>
+		<PackageIcon>blizkrieglogo300.png</PackageIcon>
+		<Version>1.0.4</Version>
+		<InformationalVersion>1.0.4</InformationalVersion>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <PackageIcon>blizkrieglogo300.png</PackageIcon>
-    <Version>1.0.2</Version>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-    <FileVersion>1.0.2</FileVersion>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>.\BlitzkriegSoftware.SecureRandomLibrary.xml</DocumentationFile>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>.\BlitzkriegSoftware.SecureRandomLibrary.xml</DocumentationFile>
-  </PropertyGroup>
+	<ItemGroup>
+		<None Remove="BlitzkriegSoftware.SecureRandomLibrary.md" />
+		<None Remove="BlitzkriegSoftware.SecureRandomLibrary.xml" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Remove="BlitzkriegSoftware.SecureRandomLibrary.md" />
-    <None Remove="BlitzkriegSoftware.SecureRandomLibrary.xml" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="BlitzkriegSoftware.SecureRandomLibrary.xml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="BlitzkriegSoftware.SecureRandomLibrary.md">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
 
-  <ItemGroup>
-    <Content Include="BlitzkriegSoftware.SecureRandomLibrary.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="BlitzkriegSoftware.SecureRandomLibrary.md">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="blizkrieglogo300.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="blizkrieglogo300.png" Pack="true" PackagePath="\" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Vsxmd" Version="1.4.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Vsxmd" Version="1.4.5">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+	<ItemGroup>
+		<Resource Include="BlitzkriegSoftware.SecureRandomLibrary.md" />
+		<Resource Include="BlitzkriegSoftware.SecureRandomLibrary.xml" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="BlitzkriegSoftware.SecureRandomLibrary.md" />
-    <Resource Include="BlitzkriegSoftware.SecureRandomLibrary.xml" />
-  </ItemGroup>
-  
 </Project>
