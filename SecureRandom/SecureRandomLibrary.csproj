@@ -47,6 +47,7 @@
 			1.0.3 - NuGet Updates and Documentation
 			1.0.2 - Release w. Namespace fixes.
 		</PackageReleaseNotes>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
