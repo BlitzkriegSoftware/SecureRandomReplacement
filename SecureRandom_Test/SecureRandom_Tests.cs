@@ -1,13 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using BlitzkriegSoftware.SecureRandomLibrary;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SecureRandom_Test
 {
     [TestClass]
+    [ExcludeFromCodeCoverage]
     public class SecureRandom_Tests
     {
-        private SecureRandom dice = new SecureRandom();
+        private SecureRandom dice = new();
 
         public SecureRandom_Tests()
         {
@@ -83,24 +85,7 @@ namespace SecureRandom_Test
             Assert.IsTrue(atLeastOne, "Should have one non-zero result");
         }
 
-#if DOTNETCORE3_0
-        public void T_Random_Next_Bytes_Span()
-        {
-            bool atLeastOne = false;
-            var buf = new byte[512];
-            var arraySpan = new Span<byte>(buf);
-            dice.NextBytes(arraySpan);
-            foreach (byte result in buf)
-            {
-                bool ok = (result >= byte.MinValue) && (result <= byte.MaxValue);
-                Assert.IsTrue(ok, "Not a valid range");
-                if (result > byte.MinValue) atLeastOne = true;
-            }
-            Assert.IsTrue(atLeastOne, "Should have one non-zero result");
-        }
-#endif
-
-        private void TestOut(string format, params object[] args)
+        private static void TestOut(string format, params object[] args)
         {
             Console.WriteLine(format, args);
             _testcontext.WriteLine(format, args);

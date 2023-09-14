@@ -54,7 +54,9 @@ namespace BlitzkriegSoftware.SecureRandomLibrary
         /// <param name="min">Lower Limit (inclusive)</param>
         /// <param name="max">Upper limit (not inclusive)</param>
         /// <returns>random integer min to max</returns>
+#pragma warning disable CA1716 // Required for compatibility w. Random()
         public virtual int Next(int min, int max)
+#pragma warning restore CA1716 // Identifiers should not match keywords
         {
             var rnd = new byte[4];
             using (var rng = new RNGCryptoServiceProvider()) rng.GetBytes(rnd);
@@ -82,15 +84,8 @@ namespace BlitzkriegSoftware.SecureRandomLibrary
         /// <param name="buf">byte array buffer</param>
         public virtual void NextBytes(byte[] buf)
         {
-            using (var rng = new RNGCryptoServiceProvider()) rng.GetNonZeroBytes(buf);
+            using RNGCryptoServiceProvider rng = new(); rng.GetNonZeroBytes(buf);
         }
-
-#if DOTNETCORE3_0
-        public void NextBytes(Span<byte> span)
-        {
-            // Not implemented yet
-        }
-#endif
 
     }
 }

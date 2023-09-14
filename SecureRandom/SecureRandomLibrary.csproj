@@ -2,34 +2,60 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<EnableNETAnalyzers>True</EnableNETAnalyzers>
+		<AnalysisLevel>6.0-recommended</AnalysisLevel>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<Version>1.0.6</Version>
+		<InformationalVersion>1.0.6</InformationalVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Authors>Stuart Williams</Authors>
+		<Company>Blitzkrieg Software</Company>
+		<Copyright>(c) 2019-2023 Blitzkrieg Software / Stuart Williams</Copyright>
+		<Title>A More Secure Replacement for Random()</Title>
+		<Product>BlitzkriegSoftware.SecureRandomLibrary</Product>
+	</PropertyGroup>
+
+	<PropertyGroup>
 		<AssemblyName>BlitzkriegSoftware.SecureRandomLibrary</AssemblyName>
 		<RootNamespace>BlitzkriegSoftware.SecureRandomLibrary</RootNamespace>
+	</PropertyGroup>
+
+	<PropertyGroup>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Description>A replacement for System.Random that leverages System.Security.Cryptography.RNGCryptoServiceProvider</Description>
-		<Copyright>(c) 2019-2022 Blitzkrieg Software / Stuart Williams</Copyright>
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement</RepositoryUrl>
 		<RepositoryType>GitHub</RepositoryType>
 		<PackageTags>System.Random, Random, Secure Random, Cryptography, RNGCryptoServiceProvider</PackageTags>
+		<PackageIconUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement/blob/master/SecureRandom/blizkrieglogo300.png</PackageIconUrl>
+		<PackageId>BlitzkriegSoftware.SecureRandomLibrary</PackageId>
+		<PackageIcon>blizkrieglogo300.png</PackageIcon>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<IncludeSymbols>True</IncludeSymbols>
+		<ApplicationIcon>favicon_32x32.ico</ApplicationIcon>
 		<PackageReleaseNotes>
+			1.0.6 - Updates and Patches
 			1.0.4 - Net Upgrade
 			1.0.3 - NuGet Updates and Documentation
 			1.0.2 - Release w. Namespace fixes.
 		</PackageReleaseNotes>
-		<PackageIconUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement/blob/master/SecureRandom/blizkrieglogo300.png</PackageIconUrl>
-		<PackageId>BlitzkriegSoftware.SecureRandomLibrary</PackageId>
-		<Authors>Stuart Williams</Authors>
-		<Company>Blitzkrieg Software</Company>
-		<Product>BlitzkriegSoftware.SecureRandomLibrary</Product>
-		<PackageIcon>blizkrieglogo300.png</PackageIcon>
-		<Version>1.0.4</Version>
-		<InformationalVersion>1.0.4</InformationalVersion>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<DocumentationFile>.\BlitzkriegSoftware.SecureRandomLibrary.xml</DocumentationFile>
+		<WarningLevel>5</WarningLevel>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -44,12 +70,18 @@
 		<Content Include="BlitzkriegSoftware.SecureRandomLibrary.md">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Content Include="favicon_32x32.ico" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="..\LICENSE">
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
+		</None>
+		<Content Include="..\README.md" Link="README.md" />
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
 		</None>
 		<None Include="blizkrieglogo300.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
@@ -64,6 +96,12 @@
 	<ItemGroup>
 		<Resource Include="BlitzkriegSoftware.SecureRandomLibrary.md" />
 		<Resource Include="BlitzkriegSoftware.SecureRandomLibrary.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="SecureRandom.cs">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Compile>
 	</ItemGroup>
 
 </Project>

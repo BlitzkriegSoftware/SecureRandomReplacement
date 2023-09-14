@@ -1,12 +1,14 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SecureRandom_Test
 {
     [TestClass]
+    [ExcludeFromCodeCoverage]
     public class SystemRandom_Tests
     {
-        private System.Random dice = new System.Random();
+        private System.Random dice = new();
 
         public SystemRandom_Tests()
         {
@@ -99,7 +101,7 @@ namespace SecureRandom_Test
             Assert.IsTrue(atLeastOne, "Should have one non-zero result");
         }
 
-        private void TestOut(string format, params object[] args)
+        private static void TestOut(string format, params object[] args)
         {
             Console.WriteLine(format, args);
             _testcontext.WriteLine(format, args);
