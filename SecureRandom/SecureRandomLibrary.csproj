@@ -6,11 +6,15 @@
 		<EnableNETAnalyzers>True</EnableNETAnalyzers>
 		<AnalysisLevel>6.0-recommended</AnalysisLevel>
 		<Nullable>disable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<NeutralLanguage>en</NeutralLanguage>
+		<WarningLevel>5</WarningLevel>
+		<IsPublishable>True</IsPublishable>
 	</PropertyGroup>
 	
 	<PropertyGroup>
-		<Version>1.0.6</Version>
-		<InformationalVersion>1.0.6</InformationalVersion>
+		<Version>1.0.8</Version>
+		<InformationalVersion>1.0.8</InformationalVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -19,6 +23,7 @@
 		<Copyright>(c) 2019-2023 Blitzkrieg Software / Stuart Williams</Copyright>
 		<Title>A More Secure Replacement for Random()</Title>
 		<Product>BlitzkriegSoftware.SecureRandomLibrary</Product>
+		<Description>A replacement for System.Random that leverages System.Security.Cryptography.RNGCryptoServiceProvider</Description>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -28,35 +33,29 @@
 
 	<PropertyGroup>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Description>A replacement for System.Random that leverages System.Security.Cryptography.RNGCryptoServiceProvider</Description>
-		<PackageLicenseExpression></PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement</PackageProjectUrl>
+		<IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<ApplicationIcon>favicon_32x32.ico</ApplicationIcon>
 		<RepositoryUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement</RepositoryUrl>
 		<RepositoryType>GitHub</RepositoryType>
+		<PackageLicenseExpression></PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement</PackageProjectUrl>
 		<PackageTags>System.Random, Random, Secure Random, Cryptography, RNGCryptoServiceProvider</PackageTags>
 		<PackageIconUrl>https://github.com/BlitzkriegSoftware/SecureRandomReplacement/blob/master/SecureRandom/blizkrieglogo300.png</PackageIconUrl>
 		<PackageId>BlitzkriegSoftware.SecureRandomLibrary</PackageId>
 		<PackageIcon>blizkrieglogo300.png</PackageIcon>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<IncludeSymbols>True</IncludeSymbols>
-		<ApplicationIcon>favicon_32x32.ico</ApplicationIcon>
 		<PackageReleaseNotes>
-			1.0.6 - Updates and Patches
+			1.0.8 - Updates and Patches
 			1.0.4 - Net Upgrade
 			1.0.3 - NuGet Updates and Documentation
 			1.0.2 - Release w. Namespace fixes.
 		</PackageReleaseNotes>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
-
+	
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<DocumentationFile>.\BlitzkriegSoftware.SecureRandomLibrary.xml</DocumentationFile>
-		<WarningLevel>5</WarningLevel>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<WarningLevel>5</WarningLevel>
 	</PropertyGroup>
 
 	<ItemGroup>

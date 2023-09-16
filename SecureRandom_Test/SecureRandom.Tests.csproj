@@ -6,11 +6,24 @@
 		<EnableNETAnalyzers>True</EnableNETAnalyzers>
 		<AnalysisLevel>6.0-recommended</AnalysisLevel>
 		<Nullable>disable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<NeutralLanguage>en</NeutralLanguage>
+		<WarningLevel>5</WarningLevel>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<RuntimeFrameworkVersion>6.0.0</RuntimeFrameworkVersion>
+		<RollForward>LatestMinor</RollForward>
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>1.0.6</Version>
-		<InformationalVersion>1.0.6</InformationalVersion>
+		<Version>1.0.8</Version>
+		<InformationalVersion>1.0.8</InformationalVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
 	</PropertyGroup>
 	
 	<PropertyGroup>
