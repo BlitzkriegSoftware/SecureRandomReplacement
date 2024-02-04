@@ -11,9 +11,7 @@ namespace BlitzkriegSoftware.SecureRandomLibrary
         /// <summary>
         /// CTOR
         /// </summary>
-        public SecureRandom()
-        {
-        }
+        public SecureRandom() { }
 
         /// <summary>
         /// CTOR w. Seed
@@ -21,10 +19,8 @@ namespace BlitzkriegSoftware.SecureRandomLibrary
         /// </summary>
         /// <param name="seed">(ignored)</param>
 #pragma warning disable IDE0060 // This is for compatibility to .NET System.Random
-        public SecureRandom(int seed)
+        public SecureRandom(int seed) { }
 #pragma warning restore IDE0060 // Remove unused parameter
-        {
-        }
 
         /// <summary>
         /// Next

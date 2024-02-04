@@ -17,8 +17,8 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>1.0.8</Version>
-		<InformationalVersion>1.0.8</InformationalVersion>
+		<Version>1.0.9</Version>
+		<InformationalVersion>1.0.9</InformationalVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -29,7 +29,7 @@
 	<PropertyGroup>
 		<Authors>Stuart Williams</Authors>
 		<Company>Blitzkrieg Software</Company>
-		<Copyright>(c) 2019-2023 Blitzkrieg Software / Stuart Williams</Copyright>
+		<Copyright>(c) 2019-2024 Blitzkrieg Software / Stuart Williams</Copyright>
 		<Title>Tests for A More Secure Replacement for Random()</Title>
 		<Product>BlitzkriegSoftware.SecureRandomLibrary.Tests</Product>
 	</PropertyGroup>

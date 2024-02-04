@@ -1,4 +1,5 @@
-# SecureRandomReplacement #
+# SecureRandomReplacement 
+
 A .NET Replacement for `System.Random` Class that is more secure as it uses `RNGCryptoServiceProvider`
 
 This should provide sufficient randomness for most use cases.
@@ -10,7 +11,7 @@ The `SecureRandom` class has the same signatures and should have the same funtio
 [API Details](https://github.com/BlitzkriegSoftware/SecureRandomReplacement/blob/master/SecureRandom/BlitzkriegSoftware.SecureRandomLibrary.md)
 
 ## License
-Copyright (c) 2018-2023
+Copyright (c) 2018-2024
 Licensed under the [MIT license](LICENSE).
 
 ## About me ##
@@ -22,5 +23,3 @@ Licensed under the [MIT license](LICENSE).
 * LinkedIn: <a href="http://lnkd.in/P35kVT" target="_blank">http://lnkd.in/P35kVT</a>
 * YouTube: <a href="https://www.youtube.com/user/spookdejur1962/videos" target="_blank">https://www.youtube.com/user/spookdejur1962/videos</a> 
 * GitHub: <a href="https://github.com/BlitzkriegSoftware/">https://github.com/BlitzkriegSoftware/</a>
-
-
